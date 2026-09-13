@@ -37,7 +37,7 @@ function readArgOrEnv(name, envName, fallback) {
 const isDev = process.argv.includes("--dev");
 const defaultPort = "3001";
 const port = Number(readArgOrEnv("--port", "PORT", defaultPort));
-const hostname = readArgOrEnv("--host", "HOST", isDev ? "0.0.0.0" : "127.0.0.1");
+const hostname = readArgOrEnv("--host", "HOST", "0.0.0.0");
 const dir = process.cwd();
 
 const app = next({
